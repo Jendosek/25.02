@@ -133,7 +133,7 @@ go
 
 create trigger prevent_specific_brand
 on products
-before insert
+for insert
 as
 begin
     if exists (select 1 from inserted where manufacturer = 'Спорт, сонце та штанга')
